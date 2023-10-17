@@ -7,7 +7,7 @@
 int main(int argc, char* argv[]) {
     std::fstream inFile(argv[1]); // Open the input file
     if (!inFile.is_open()) {
-        std::cerr << "Unable to open file";
+        std::cerr << "Unable to open file" << argv[1];
         return 1;   // Return with error
     }
     std::vector<int> numbers;
@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 
     std::ofstream outFile(argv[2]); // Open the output file
     if (!outFile.is_open()) {
-        std::cerr << "Unable to open file";
+        std::cerr << "Unable to open file" << argv[2];
         return 1;   // Return with error
     }
 
