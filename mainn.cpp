@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
     size_t count_0 = std::count(numbers.begin(), it, 0);
     size_t count_1 = std::count(numbers.begin(), it, 1);
 
-    std::ofstream outFile(argv[2]); // Open the output file
+    std::fstream outFile(argv[2]); // Open the output file
     if (!outFile.is_open()) {
         std::cerr << "Unable to open output file " << argv[2];
         return 1;   // Return with error
